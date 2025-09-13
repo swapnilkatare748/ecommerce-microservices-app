@@ -1,0 +1,36 @@
+.ProductList {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    transform: translateY(-50%);
+    background-color: rgba(249, 249, 249, 0.857);
+    color: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 0  10px 10px 0px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+  }
+  
+  /* Left Arrow */
+  .prev {
+  left: 10px;
+}
+  
+  /* Right Arrow */
+  .next {
+    right: 10px;
+}
+  
+  /* Add hover effect */
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

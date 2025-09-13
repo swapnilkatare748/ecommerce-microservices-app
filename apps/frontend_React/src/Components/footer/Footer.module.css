@@ -1,0 +1,215 @@
+
+.footer {
+  background-color: var(--subnav);
+  color: var(--color-muted);
+  box-sizing: border-box; 
+  padding: 20px;
+}
+
+.footerTop{
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 0;
+}
+
+.footerBrand, .footerList, .contact-details {
+  flex: 1;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: start;
+  min-width: 400px;
+  min-height: 200px;
+}
+
+.logo{
+  font-size: 3rem;
+}
+
+.footerText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bfbfbf;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerListTitle {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footerList li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #d3d3d3;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.footer-link ion-icon {
+  font-size: 16px;
+  color: #7cfc00;  
+}
+
+.footer-link:hover {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.footer-item ion-icon {
+  font-size: 20px;
+  color: #7cfc00;
+}
+
+.address {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.address-link {
+  color: #7cfc00;
+  text-decoration: underline;
+}
+
+.address-link:hover {
+  opacity: 0.8;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 20px;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #bfbfbf;
+}
+
+.copyright-link {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.copyright-link:hover {
+  opacity: 0.8;
+}
+
+.socialLink {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0;
+}
+
+.socialLink {
+  color: #d3d3d3;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #7cfc00;
+  color: #ffffff;
+  border-color: #7cfc00;
+}
+
+
+.back-top-btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #7cfc00;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-top-btn:hover {
+  background-color: #7cfc00;
+  color: #1b1b1b;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 10px; 
+    text-align: left; 
+    
+  }
+
+  .footerTop {
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-top: 0; 
+    gap: 20px; 
+    margin-top: 70px;
+  }
+
+  .footerBrand,
+  .footerList,
+  .contact-details {
+    max-width: 100%; 
+    margin-bottom: 20px; 
+    text-align: left; 
+  }
+
+  .footerList li {
+    text-align: left; 
+  }
+
+  .footerBottom {
+    flex-direction: column; 
+    gap: 10px; 
+    padding: 20px 0;
+    text-align: left; 
+  }
+
+  .copyright {
+    text-align: left; 
+    margin-left: 0;
+  }
+
+  .socialLink {
+    justify-content: flex-start; 
+  }
+
+  .socialLink {
+    margin-left: 0; 
+  }
+}
+.socialList{
+  display: flex;
+  gap: 1rem;
+}

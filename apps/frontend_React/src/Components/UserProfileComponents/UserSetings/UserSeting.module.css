@@ -1,0 +1,23 @@
+.UserSeting{
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    margin: 20px;
+    height: max-content;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.settingItem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    height: 60px;
+    border-bottom: var(--gray-border);
+    transition: 0.3s;
+}
+.settingItem:hover{
+    cursor: pointer;
+    background-color: var(--cardText);
+    color: var(--bg-secondary);
+}

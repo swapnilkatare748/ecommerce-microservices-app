@@ -1,0 +1,21 @@
+{
+  "name": "product_service",
+  "version": "1.0.0",
+  "description": "this is products_service",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "na"
+  ],
+  "author": "swapnil katare",
+  "license": "ISC",
+  "dependencies": {
+    "cores": "^0.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

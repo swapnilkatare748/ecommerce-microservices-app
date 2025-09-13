@@ -1,0 +1,19 @@
+{
+  "name": "apigateway",
+  "version": "1.0.0",
+  "description": "this is the gatewary for apis to manage the oll servces",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "swapnil katare",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-http-proxy": "^2.1.1",
+    "nodemon": "^3.1.10"
+  }
+}

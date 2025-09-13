@@ -1,0 +1,28 @@
+{
+  "name": "customer_service",
+  "version": "1.0.0",
+  "description": "this is use to manage the e commars customer services ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "microservices"
+  ],
+  "author": "swapnil katare",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10"
+  }
+}

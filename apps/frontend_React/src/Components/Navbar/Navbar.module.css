@@ -1,0 +1,294 @@
+
+.header {
+    padding-block: 15px;
+    position: relative;
+    padding: 1em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--nav);
+    color: var(--color-white);
+    transition: var(--transition-1);
+    z-index: 1000;
+  }
+  @media (max-width:768px){
+    .header{
+      padding: 10px;
+    }
+  }
+
+  .header.active {
+    padding-block: 12px;
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-1);
+  }
+  
+  .container {
+    display: flex;
+    padding: 0 0.5em;
+    align-items: center;
+  }
+  
+  .logo {
+    position: relative;
+    min-width: 77px;
+    z-index: 2;
+  }
+  
+  .logo a {
+    color: var(--color-white);
+  }
+  
+  .logo span {
+    display: inline-block;
+    color: var(--color-white);
+    margin-left: 2px;
+  }
+  
+  .navbarActions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+  
+  .languageSelect {
+       background-color: var(--bg-primary);
+        width: 45px;
+        color: var(--color-text);
+  }
+  
+  .languageSelect option {
+    background: var(--bg-primary);
+    color: var(--color-primary);
+  }
+  
+  
+  .icon {
+    position: relative;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    box-shadow: inset 9px -6px var(--color-primary);
+    transition: var(--transition-1);
+  }
+  
+  .navToggleBtn {
+    position: relative;
+    transform: rotate(-55deg);
+    transition: var(--transition-1);
+    z-index: 2;
+  }
+  
+  .navToggleBtn.active {
+    transform: rotate(-45deg);
+  }
+  
+  .navToggleBtn span {
+    width: 20px;
+    height: 2px;
+    background: black;
+    margin: 5px;
+    transition: var(--transition-1);
+  }
+  
+  .navToggleBtn :is(.one, .three) {
+    width: 10px;
+  }
+  
+  .navToggleBtn .one {
+    margin-left: auto;
+    transform-origin: left;
+  }
+  
+  .navToggleBtn .three {
+    transform-origin: right;
+  }
+  
+  .navToggleBtn.active .one {
+    transform: rotate(90deg) translateX(-3px);
+  }
+  
+  .navToggleBtn.active .three {
+    transform: rotate(90deg) translateX(3px);
+  }
+  
+  .navbar {
+    position: fixed;
+    background: var(--bg-secondary);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    transition: 0.75s cubic-bezier(0.71, 0.01, 0.24, 0.99);
+    transition-delay: 0.5s;
+    z-index: 1;
+  }
+  
+  .navbar.active {
+    top: 0;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  .navbarVisible.active {
+    top: 0;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  
+  .navbarList > li {
+    margin-block: 20px;
+    padding-inline: 50px;
+    
+    overflow: hidden;
+  }
+  
+  .navbarLink {
+    position: relative;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    /* color: var(--bg-secondary); */
+    justify-content: center;
+    margin-inline: auto;
+    gap: 5px;
+    font-size: var(--fs-1);
+    transform: translateY(50px);
+    transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
+    animation:  fadeIn ease-in-out;
+    
+  }
+  
+  .navbar.active .navbarLink {
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  
+  .navbarLink::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 5px;
+    width: 0;
+    background: var(--raw-seinna);
+    transition: var(--transition-1);
+  }
+  
+  .navbarLink:is(:hover, :focus)::before {
+    width: 100%;
+  }
+
+  .navbarVisible{
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  .navbarVisible ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    gap: 1rem;
+    padding: 0px 10px;
+    animation: slide linear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry cover;  
+    transition: 1s;
+  }
+
+  .navbarVisible >ul>li>{
+    transform: translateY(10em);
+    transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
+  }
+  .navbar.active .navbarVisible >ul>li>{
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+
+  .navbarLink{
+    transform: translateY(100px);
+    transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
+  }
+  
+  .navbar.active .navbarLink{
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  
+  @keyframes slide{
+    from{
+      opacity: 0;
+     transform: scale(0.9);
+    }
+    to{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  
+
+  .navToggleBtn{
+    display: none;
+  }
+  .navbarVisible ul a{
+    font-size: 1.1em;
+    transform: translateY(5px);
+    transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
+  }
+ 
+  @media (max-Width:700px) {
+    .navbarVisible{
+      display: none ;
+    }
+    .navToggleBtn{
+      display: block;
+    }
+  }
+
+  .header {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .header.scrolled {
+    background-color:var(--bg-secondary); /* Light white background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  }
+  
+ @media only screen and (max-width: 868px) {
+  
+    .logo span {
+      display: none;
+   
+  }
+  .navbarVisible > ul {
+        justify-content: space-between;
+        gap: 1em;
+  }
+}
+.PrimaryinputFields{
+  flex: 1;
+}
+
+.languageSelect {
+  padding: 6px 12px;
+  border: 1px solid var(--gray-border);
+  border-radius: 5px;
+  background-color: var(--color-white);
+  font-size: 14px;
+  cursor: pointer;
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for select */
+.languageSelect:hover {
+  background-color: var(--bg-primary);
+}

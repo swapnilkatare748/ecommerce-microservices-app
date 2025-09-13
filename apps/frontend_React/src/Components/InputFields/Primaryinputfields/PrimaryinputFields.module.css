@@ -1,0 +1,54 @@
+.PrimaryinputFields {
+  color: var(--color-muted);
+  width: 90%;
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  border-radius: 5px;
+}
+.PrimaryinputFields {
+  cursor: text;
+  box-shadow: var(--shodow-2);
+}
+
+.selectCatagary {
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 8px; /* Padding affects inside the select */
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Optional: Add custom arrow */
+.selectCatagary {
+  background-image: url("data:image/svg+xml;utf8,<svg ...>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.selectCatagaryOption {
+  padding: 10px;
+}
+
+.inputFields {
+  flex: 1;
+}
+
+.SearchButton {
+  background: var(--searchButton);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+}
+.SerchButton:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,145 @@
+.cartPage {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    background: var(--bg-primary);
+  }
+  
+  .productSection {
+    flex: 2;
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+.productName{
+    display: flex;
+    justify-content: space-between;
+}
+  
+  .heading {
+    font-size: 24px;    
+  }
+  
+  .emptyCart {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .cartItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-muted);
+  }
+  
+  .productImage {
+    width: 15%;
+    height: 40%;
+    object-fit: cover;
+  }
+  
+    .itemDetails {
+    flex: 1;
+  }
+  
+  .price {
+    font-size: 16px;
+    color: #27ae60;
+  }
+  
+  .quantityControl {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .buttonsSection{
+    display: flex;
+    justify-content: space-between;
+  }
+  .removeButton {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .removeButton:hover {
+    background: #c0392b;
+  }
+
+  .quantityControl button {
+    padding: 2px 5px;
+    background: var(--bg-secondary);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .quantityControl button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  /* Summary Section */
+  .summarySection {
+    flex: 1;
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .summarySection h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .checkoutButton {
+    background: #2d89ef;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .checkoutButton:hover {
+    background: #1e64c8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cartPage {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .cartItem {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .productImage {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .summarySection {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,145 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    background: var( --bg-secondary);
+    z-index: 90;
+    overflow: hidden;
+
+}
+
+.navbar .navRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+.navbar .navRow :first-child{
+    /* padding: 8px 20px; */
+    border-bottom: center;
+
+}
+.navbar .navRow .column{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar .navRow .logo{
+    color: var(--color-white);
+   background: var(--gradient-1);
+   border-radius: 5px;
+   display: none;
+}
+.navbar .navRow .icon-btn{
+    border-radius: 10px;    color: var(--bg-primery);
+
+}
+.navbar .navRow .searchContainer{
+    background: var(--bg-varient);
+    padding: 0 10px;
+}
+.navbar .navRow .searchContainer{
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    border:  var(--gray-border);
+    transition: var(--transition); 
+}
+
+.navbar .navRow .searchContainer.active{
+    background: var(--bg-primery);
+    border-color: var(--color-primary);
+}
+.navbar .navRow .searchContainer .icon{
+    font-size: 20px;
+}
+.navbar .navRow .searchContainer input{
+    width: 100%;
+
+}
+
+.navbar .navRow .addBtn{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--bg-secondary);
+    text-align: center;
+    background: var(--gradient-1);
+
+   
+}
+.navbar .navRow .menu-btn{
+    font-size: 20px;
+    /* display: none; */
+}
+.navbar .navRow .tabsContainer .tab{
+    position: relative;
+    padding: 20px;
+}
+.navbar  .navRow .tabsContainer .tab.active::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 51px;
+    background: var(--gradient-1);
+    
+}
+.icon-wrapper{
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-text);
+    background: var(--bg-variant);
+   }
+  
+   .icon-wrapper:hover{
+    transform: 2.8rem;
+    height: 2.8rem;
+    min-width: 2.8rem;
+    max-width: 2.8rem;
+    max-height: 2.5rem;
+    min-height: 2.5rem;
+    overflow: hidden;
+    border-radius:100% ;
+    cursor: pointer;
+    transition: var(--transition);
+  
+   }
+
+   .icon-btn{
+    color: var(--bg-secondary);
+    color: black;
+   }
+
+   @media(max-width:900px){
+    .navbar .navRow .menu-btn{
+        display: flex;
+    }
+    .navbar .navRow .logo{
+        display: flex;
+    }
+}
+
+@media(max-width:780px){
+    .navbar .navRow .searchContainer{
+        display: none;
+    }
+   }
+   @media(max-width:780px){
+    .navbar .navRow .addBtn{
+        display: none;
+    }
+   }
+

@@ -1,0 +1,144 @@
+.SubNavbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--subnav);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Primary Navigation Section */
+  .primaryNavSection {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .primaryNavSection ul {
+    display: flex;
+    gap: 0px 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbarLink {
+    position: relative; /* Ensure .sliderMenu is positioned correctly */
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Add hover effect */
+  .navbarLink a {
+    height: 100%;
+    text-decoration: none;
+    color: var(--color-white);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbarLink:hover a {
+    color: var(--color-muted); /* Change this to your desired hover color */
+  }
+  
+  /* Offer Section */
+  .OfferSection {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .primaryNavSection ul {
+      gap: 15px;
+    }
+    .navbarLink {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .SubNavbar {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .primaryNavSection {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .OfferSection {
+      width: auto;
+      margin-top: 10px;
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  
+  /* Hide Navbar on Small Screens */
+  @media (max-width: 700px) {
+    .SubNavbar {
+      display: none;
+    }
+  }
+  
+
+/* slide menu  */
+
+
+.sliderMenu {
+  position: absolute;
+  top:30px;
+  z-index: 1000;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--subnav);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(241, 236, 236, 0.1);
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(10px);
+}
+
+.navbarLink:hover .sliderMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sliderMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sliderMenu li {
+  border-bottom: 1px solid #ddd;
+}
+
+.sliderMenu li:last-child {
+  border-bottom: none;
+}
+
+.sliderMenu li a {
+  padding: 10px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.sliderMenu li a:hover {
+  background-color: var(--color-white);
+}

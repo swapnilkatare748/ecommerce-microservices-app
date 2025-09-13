@@ -1,0 +1,44 @@
+.Error{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--contact-back);
+}
+
+.Error > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    filter: brightness(90%);
+}
+.content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 40%;
+}
+.content h1{
+  font-size: 5em;
+  text-shadow: 2px 5px 10px black;
+}
+.content h1::after{
+    content: "4";
+    color: rgba(255, 0, 0, 0.861);
+}
+.content P{
+    margin-top: 10px;
+   font-size: large;
+}
+.lastline{
+    position: absolute;
+    bottom: 10px;
+    width: max-content;
+    text-align: center;
+}
