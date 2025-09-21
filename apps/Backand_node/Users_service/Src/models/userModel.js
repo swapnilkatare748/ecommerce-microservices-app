@@ -2,16 +2,24 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
+    id: {type : Number, unique: true},
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-
     gender: {
       type: String,
       enum: ["male", "female", "trans", "other"], 
       default: "other",
     },
-
+    notifications:{
+      email: { type: Boolean, default: true },
+      sms: { type: Boolean, default: false },
+      push: { type: Boolean, default: true },
+    },
+    socialLogin:{
+      google: { type: Boolean, default: false },
+      facebook: { type: Boolean, default: false },
+    },
     role: {
       type: String,
       enum: ["customer", "admin"],
@@ -26,6 +34,9 @@ const userSchema = new mongoose.Schema(
 
     isVerified: { type: Boolean, default: false },
     birthday: { type: Date },
+    description:{ type: String },
+    createdAt: { type: Date, default: Date.now },
+    lastLogin: { type: Date },
 
     shippingAddress: {
       street: { type: String },
@@ -42,7 +53,7 @@ const userSchema = new mongoose.Schema(
       country: { type: String },
       zip: { type: String },
     },
-
+  
     cart: [
       {
         productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" }, 

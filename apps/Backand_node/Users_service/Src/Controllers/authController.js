@@ -12,29 +12,31 @@ const generateToken = (id) =>{
 
 exports.signup = async (req,res)=>{
     try{
-        const {name,email,password} = req.body;
+        const { name, email, password, confirmPassword } = req.body;
 
         // check if user already exists 
-        let user = await user.findOne({email});
-        if(user){
-            return res.status(400).json({message:"user already exists"});
+        let existingUser = await user.findOne({ email });
+        if (existingUser) {
+          return res.status(400).json({ message: "user already exists" });
+        };
+      
+        if(password !== confirmPassword){
+            return res.status(400).json({message:"passwords do not match"});
+        };
 
-        }
-
-        user = new user({
+        let Newuser = new user({
             name,
             email,
             password,
         });
 
-        await user.save();
+        await Newuser.save();
         const token = generatetoken(user._id);
         
         const emailSent = await sendEmail({
-            to:user.email,
-            subject:"verify your email",
-            text: 'hello ${user.name}, please verify your email by clicking on the link: http://localhost:5000/api/verify/${token}',
-            
+          to: Newuser.email,
+          subject: "verify your email",
+          text: "hello ${Newuser.name}, please verify your email by clicking on the link: http://localhost:5000/api/verify/${token}",
         });
 
         if(!emailSent){

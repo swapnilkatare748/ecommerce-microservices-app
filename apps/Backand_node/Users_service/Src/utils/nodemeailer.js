@@ -23,7 +23,7 @@ const sendEmail = async ({ to, subject, text }) => {
       to,
       subject,
       text,
-      html: `<p>${text}</p>`, // Convert plain text to HTML format
+      html: `<p>${text}</p>`, 
     });
 
     console.log("Email sent:", info.messageId);
