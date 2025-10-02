@@ -10,7 +10,7 @@ export const createProduct = async (data) => {
     }   
 };
 
-// function to get all products
+// function to get all products 
 export const getAlLProducts = async()=>{
     try{
         const response = await axios.get(`${ProductService_Url}`);

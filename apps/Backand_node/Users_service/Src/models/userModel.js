@@ -2,21 +2,20 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema(
   {
-    id: {type : Number, unique: true},
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     gender: {
       type: String,
-      enum: ["male", "female", "trans", "other"], 
+      enum: ["male", "female", "trans", "other"],
       default: "other",
     },
-    notifications:{
+    notifications: {
       email: { type: Boolean, default: true },
       sms: { type: Boolean, default: false },
       push: { type: Boolean, default: true },
     },
-    socialLogin:{
+    socialLogin: {
       google: { type: Boolean, default: false },
       facebook: { type: Boolean, default: false },
     },
@@ -34,7 +33,7 @@ const userSchema = new mongoose.Schema(
 
     isVerified: { type: Boolean, default: false },
     birthday: { type: Date },
-    description:{ type: String },
+    description: { type: String },
     createdAt: { type: Date, default: Date.now },
     lastLogin: { type: Date },
 
@@ -53,17 +52,17 @@ const userSchema = new mongoose.Schema(
       country: { type: String },
       zip: { type: String },
     },
-  
+
     cart: [
       {
-        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" }, 
+        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
         quantity: { type: Number, default: 1 },
       },
     ],
 
     orders: [
       {
-        orderId: { type: mongoose.Schema.Types.ObjectId, ref: "Order" }, 
+        orderId: { type: mongoose.Schema.Types.ObjectId, ref: "Order" },
         date: { type: Date, default: Date.now },
         totalAmount: { type: Number },
         status: {
@@ -77,11 +76,11 @@ const userSchema = new mongoose.Schema(
     paymentMethods: [
       {
         cardType: { type: String, enum: ["Credit", "Debit", "UPI", "COD"] },
-        cardNumber: { type: String }, 
+        cardNumber: { type: String },
       },
     ],
   },
-  { timestamps: true } 
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("User", userSchema);

@@ -1,20 +1,21 @@
-const  Product = require("../models/productModel.js");
+const  Product = require("../models/productmodles.js");
 
 const cloudinary = require("../utils/cloudinary.js");
 
 const addProduct = async (req, res) => {
     try {
-        const image = [];
+        const images = [];
+
         if(req.files && req.files.length > 0){
             for(const file of teq.files){
-                ImageTrackList.push(file.path);
+                images.push(file.path);
             }
         }
     
 
-    const product = new product({
-        ...req.body,
-        images
+    const product = new Product({
+      ...req.body,
+        images,
     });
 
     await product.save();
@@ -25,6 +26,7 @@ catch(error){
     res.status(500).json({message : error.message});
 }
 };
+
 
 const getAllProducts = async (req,res)=>{
     try{

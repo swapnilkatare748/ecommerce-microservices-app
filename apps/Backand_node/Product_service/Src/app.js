@@ -1,8 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const ConnectDB = require("./db/db.js");
+const ConnectDB = require("./Config/db.js");
 const ApiesRoutes = require("./Routes/Routes.js");
+
 
 dotenv.config();
 const app = express();
