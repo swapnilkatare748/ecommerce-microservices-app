@@ -5,8 +5,9 @@ const proxy = require("express-http-proxy");
 // const ConnectDB = require("./db/db.js");
 // const ApiesRoutes = require("./Routes/Routes.js");
 
-dotenv.config();
+
 const app = express();
+dotenv.config({ override: true });
 
 // data base connection
 // ConnectDB();

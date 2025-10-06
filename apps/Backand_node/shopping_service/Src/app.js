@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const ConnectDB = require("./db/db.js");
+const ConnectDB = require("./Config/db.js");
 const ApiesRoutes = require("./Routes/Routes.js");
 
 dotenv.config();
@@ -14,7 +14,7 @@ ConnectDB();
 app.use(cors());
 app.use(express.json());
 
-app.use("/apis", ApiesRoutes);
+// app.use("/apis", ApiesRoutes);
 
 app.use("/app", (req, res) => {
   res.send("Welcome shping services to the app !");
